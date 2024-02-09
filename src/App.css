@@ -1,0 +1,343 @@
+.app-container {
+  max-width: 400px;
+  margin: auto;
+  padding: 50px;
+  text-align: center;
+color:white;
+  border-radius: 20px;
+
+  height: 254px;
+  border-radius: 1rem;
+  background-color:#07182E;
+  
+  box-shadow: rgba(0, 0, 0, 0.17) 0px -23px 25px 0px inset, rgba(0, 0, 0, 0.15) 0px -36px 30px 0px inset, rgba(0, 0, 0, 0.1) 0px -79px 40px 0px inset, rgba(0, 0, 0, 0.06) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px;
+}
+
+
+h2 {
+  margin-left: 700px;
+  font-family: cursive;
+
+}
+navbar {
+  background-color: #5b689c;
+  position: absolute;
+  width: 100%;
+  height: 80px; /* Ajusta la altura según tus necesidades */
+  color: #ccc;
+  margin: 0;
+  padding: 0;
+  font-size: 30px;
+  font-style: italic;
+  display: flex;
+  align-items: center; /* Para centrar verticalmente el contenido */
+}
+
+navbar img {
+  height: 60%; /* Ajusta el tamaño de la imagen según tus necesidades */
+  margin-right: 10px; /* Añade espacio entre la imagen y el texto */
+}
+
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  border-radius: 15px;
+  font-family: cursive;
+}
+
+.form-label {
+  font-size: 20px;
+  margin-bottom: 8px;
+  border-radius: 15px;
+}
+input{
+  border-radius: 8px;
+  height: 25px;
+}
+.form-input,
+.textarea {
+  padding: 10px;
+  margin-bottom: 16px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 14px;
+}
+
+.textarea {
+  resize: vertical;
+  /* Permite ajustar la altura verticalmente */
+}
+
+.input-error {
+  border-color: #ff5252;
+}
+
+.error-message {
+  color: #ff5252;
+  font-size: 14px;
+  margin-top: -8px;
+  margin-bottom: 16px;
+}
+
+.continue-application {
+  --color: #fff;
+  --background: #404660;
+  --background-hover: #3A4059;
+  --background-left: #2B3044;
+  --folder: #F3E9CB;
+  --folder-inner: #BEB393;
+  --paper: #FFFFFF;
+  --paper-lines: #BBC1E1;
+  --paper-behind: #E1E6F9;
+  --pencil-cap: #fff;
+  --pencil-top: #275EFE;
+  --pencil-middle: #fff;
+  --pencil-bottom: #5C86FF;
+  --shadow: rgba(13, 15, 25, .2);
+  border: none;
+  outline: none;
+  cursor: pointer;
+  position: relative;
+  border-radius: 5px;
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 19px;
+  -webkit-appearance: none;
+  -webkit-tap-highlight-color: transparent;
+  padding: 17px 29px 17px 69px;
+  transition: background 0.3s;
+  color: var(--color);
+  background: var(--bg, var(--background));
+  font-family: cursive;
+}
+
+.continue-application>div {
+  top: 0;
+  left: 0;
+  bottom: 0;
+  width: 53px;
+  position: absolute;
+  overflow: hidden;
+  border-radius: 5px 0 0 5px;
+  background: var(--background-left);
+}
+
+.continue-application>div .folder {
+  width: 23px;
+  height: 27px;
+  position: absolute;
+  left: 15px;
+  top: 13px;
+}
+
+.continue-application>div .folder .top {
+  left: 0;
+  top: 0;
+  z-index: 2;
+  position: absolute;
+  transform: translateX(var(--fx, 0));
+  transition: transform 0.4s ease var(--fd, 0.3s);
+}
+
+.continue-application>div .folder .top svg {
+  width: 24px;
+  height: 27px;
+  display: block;
+  fill: var(--folder);
+  transform-origin: 0 50%;
+  transition: transform 0.3s ease var(--fds, 0.45s);
+  transform: perspective(120px) rotateY(var(--fr, 0deg));
+}
+
+.continue-application>div .folder:before,
+.continue-application>div .folder:after,
+.continue-application>div .folder .paper {
+  content: "";
+  position: absolute;
+  left: var(--l, 0);
+  top: var(--t, 0);
+  width: var(--w, 100%);
+  height: var(--h, 100%);
+  border-radius: 1px;
+  background: var(--b, var(--folder-inner));
+}
+
+.continue-application>div .folder:before {
+  box-shadow: 0 1.5px 3px var(--shadow), 0 2.5px 5px var(--shadow), 0 3.5px 7px var(--shadow);
+  transform: translateX(var(--fx, 0));
+  transition: transform 0.4s ease var(--fd, 0.3s);
+}
+
+.continue-application>div .folder:after,
+.continue-application>div .folder .paper {
+  --l: 1px;
+  --t: 1px;
+  --w: 21px;
+  --h: 25px;
+  --b: var(--paper-behind);
+}
+
+.continue-application>div .folder:after {
+  transform: translate(var(--pbx, 0), var(--pby, 0));
+  transition: transform 0.4s ease var(--pbd, 0s);
+}
+
+.continue-application>div .folder .paper {
+  z-index: 1;
+  --b: var(--paper);
+}
+
+.continue-application>div .folder .paper:before,
+.continue-application>div .folder .paper:after {
+  content: "";
+  width: var(--wp, 14px);
+  height: 2px;
+  border-radius: 1px;
+  transform: scaleY(0.5);
+  left: 3px;
+  top: var(--tp, 3px);
+  position: absolute;
+  background: var(--paper-lines);
+  box-shadow: 0 12px 0 0 var(--paper-lines), 0 24px 0 0 var(--paper-lines);
+}
+
+.continue-application>div .folder .paper:after {
+  --tp: 6px;
+  --wp: 10px;
+}
+
+.continue-application>div .pencil {
+  height: 2px;
+  width: 3px;
+  border-radius: 1px 1px 0 0;
+  top: 8px;
+  left: 105%;
+  position: absolute;
+  z-index: 3;
+  transform-origin: 50% 19px;
+  background: var(--pencil-cap);
+  transform: translateX(var(--pex, 0)) rotate(35deg);
+  transition: transform 0.4s ease var(--pbd, 0s);
+}
+
+.continue-application>div .pencil:before,
+.continue-application>div .pencil:after {
+  content: "";
+  position: absolute;
+  display: block;
+  background: var(--b, linear-gradient(var(--pencil-top) 55%, var(--pencil-middle) 55.1%, var(--pencil-middle) 60%, var(--pencil-bottom) 60.1%));
+  width: var(--w, 5px);
+  height: var(--h, 20px);
+  border-radius: var(--br, 2px 2px 0 0);
+  top: var(--t, 2px);
+  left: var(--l, -1px);
+}
+
+.continue-application>div .pencil:before {
+  -webkit-clip-path: polygon(0 5%, 5px 5%, 5px 17px, 50% 20px, 0 17px);
+  clip-path: polygon(0 5%, 5px 5%, 5px 17px, 50% 20px, 0 17px);
+}
+
+.continue-application>div .pencil:after {
+  --b: none;
+  --w: 3px;
+  --h: 6px;
+  --br: 0 2px 1px 0;
+  --t: 3px;
+  --l: 3px;
+  border-top: 1px solid var(--pencil-top);
+  border-right: 1px solid var(--pencil-top);
+}
+
+.continue-application:before,
+.continue-application:after {
+  content: "";
+  position: absolute;
+  width: 10px;
+  height: 2px;
+  border-radius: 1px;
+  background: var(--color);
+  transform-origin: 9px 1px;
+  transform: translateX(var(--cx, 0)) scale(0.5) rotate(var(--r, -45deg));
+  top: 26px;
+  right: 16px;
+  transition: transform 0.3s;
+}
+
+.continue-application:after {
+  --r: 45deg;
+}
+
+.continue-application:hover {
+  --cx: 2px;
+  --bg: var(--background-hover);
+  --fx: -40px;
+  --fr: -60deg;
+  --fd: .15s;
+  --fds: 0s;
+  --pbx: 3px;
+  --pby: -3px;
+  --pbd: .15s;
+  --pex: -24px;
+}
+
+.course-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+}
+
+.course-card {
+  background-color: #f0f0f0;
+  border-radius: 8px;
+  padding: 20px;
+  width: 300px;
+  text-align: left;
+}
+
+.course-card img {
+  width: 100%;
+  height: auto; /* Ajusta la altura automáticamente para mantener la proporción */
+  border-top-left-radius: 8px;
+  border-top-right-radius: 8px;
+}
+.App {
+  text-align: center;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  font-family: cursive;
+}
+
+.servicios {
+  background-color: #0c1f72;
+  font-family: cursive;
+}
+
+.servicios main {
+  display: flex;
+  justify-content: center; /* Para centrar las tarjetas horizontalmente */
+}
+
+.servicios main section {
+  display: flex; /* Para colocar las tarjetas una al lado de la otra */
+}
+
+.card {
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  margin: 10px;
+  padding: 20px;
+  max-width: 300px; /* Ajusta el ancho máximo según tu diseño */
+}
+
+.card h4 {
+  color: #0c1f72;
+}
+
+.card p {
+  color: #333;
+}
+
