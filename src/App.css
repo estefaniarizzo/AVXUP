@@ -1,12 +1,19 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Ojuju:wght@200..800&display=swap');
+body{
+  font-family: "Montserrat", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400px;
+  font-style: normal;
+}
 .app-container {
-  max-width: 400px;
+  max-width: 800px;
   margin: auto;
   padding: 50px;
   text-align: center;
 color:white;
   border-radius: 20px;
 
-  height: 254px;
+  height: 354px;
   border-radius: 1rem;
   background-color:#07182E;
   
@@ -16,26 +23,48 @@ color:white;
 
 h2 {
   margin-left: 700px;
-  font-family: cursive;
+  
 
 }
 navbar {
   background-color: #5b689c;
-  position: absolute;
+  position: fixed;
   width: 100%;
   height: 80px; /* Ajusta la altura según tus necesidades */
   color: #ccc;
   margin: 0;
   padding: 0;
   font-size: 30px;
-  font-style: italic;
+  
   display: flex;
   align-items: center; /* Para centrar verticalmente el contenido */
 }
 
+
 navbar img {
   height: 60%; /* Ajusta el tamaño de la imagen según tus necesidades */
   margin-right: 10px; /* Añade espacio entre la imagen y el texto */
+}
+ ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+ ul li {
+  display: inline-block;
+  margin-right: 50px;
+}
+
+ ul li:last-child {
+  margin-right: 0;
+}
+ ul li a {
+  text-decoration: none;
+  color: #ccc;
+}
+
+.navbar ul li a:hover {
+  color: #fff; /* Cambia el color al pasar el cursor sobre el enlace */
 }
 
 .contact-form {
@@ -307,12 +336,12 @@ input{
   min-height: 100vh;
   display: flex;
   flex-direction: column;
-  font-family: cursive;
+  
 }
 
 .servicios {
-  background-color: #0c1f72;
-  font-family: cursive;
+  background-color: #ffffff;
+ 
 }
 
 .servicios main {
@@ -340,4 +369,59 @@ input{
 .card p {
   color: #333;
 }
+.carrusel-container {
+  max-width: 100%; /* Ajusta según el diseño general de tu página */
+  max-height: 200px; /* Ajusta el tamaño del carrusel */
+  overflow: hidden; /* Para ocultar el contenido que se desborda */
+}
 
+.carrusel {
+  width: 100%; /* Para asegurar que el carrusel ocupe todo el ancho del contenedor */
+  height: 1000px; /* Para mantener la proporción de aspecto de las imágenes */
+}
+
+.carrusel img {
+  max-width: 100%; /* Ajusta el tamaño máximo de la imagen */
+  height: 1000px; /* Para mantener la proporción de aspecto de las imágenes */
+}
+.row {
+  display: flex; /* Usa flexbox para alinear los contadores */
+  justify-content: center; /* Centra horizontalmente los contadores */
+  
+}
+
+.counter-box {
+  width: 200px; /* Ancho de cada contador */
+  margin-bottom: 30px;
+  margin: 0 10px; /* Agrega un pequeño margen entre los contadores */
+}
+.counter-ico {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 60px;
+  height: 60px;
+  background-color: #f1ffb3;
+  border-radius: 50%;
+  margin: 0 auto 20px;
+}
+
+.counter-ico i {
+  font-size: 36px;
+  color: #007bff;
+}
+
+.counter-num {
+  font-size: 24px;
+  font-weight: bold;
+  color: #333;
+  display: flex; /* Usa flexbox para centrar el contenido */
+  justify-content: center; /* Centra horizontalmente el contenido */
+  align-items: center; /* Centra verticalmente el contenido */
+  padding: auto;
+}
+
+.counter-text {
+  font-size: 18px;
+  color: #555;
+}
