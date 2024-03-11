@@ -167,16 +167,6 @@ function App() {
       <div id="servicios" className='servicios'>
         <h2>Nuestros Servicios</h2>
         <hr></hr>
-        <p className='p-servicios'>Somos una empresa con personal altamente calificado con experiencia en telecomunicaciones,
-          nuestro portafolio de servicios ofrece la instalación de cableado estructurado, Fibra Óptica,
-          instalación de puntos de red certificados, integración de dispositivos de red como Switch, Routers,
-          traslado de datacenter, Instalación y organización de rack, mantenimientos preventivos y correctivos,
-          Soluciones de CCTV, Control de acceso, diseño y arquitectura de redes LAN, asesoramos para rediseñar su red LAN,
-          consultoría para redes Informáticas</p>
-        <p className='p-servicios'>AvxÜP Solutions SAS es una empresa de redes y telecomunicaciones que trabaja con materias
-          de alta calidad garantizando la durabilidad y rendimiento, se realiza acompañamiento al cliente
-          antes, durante y después de la implementación de nuestros servicios para garantizar una correcta
-          implementación y funcionalidad de la solución adquirida de nuestra empresa.</p>
         <main>
           <section>
             <div className="card">
@@ -213,31 +203,10 @@ function App() {
                 de mantenimiento preventivo y correctivos para mantener tu red en su mejor forma.
                 Y si surge algún problema, actuamos con la mayor velocidad posible. Tu tranquilidad es nuestra prioridad.</p>
             </div>
-            <div className="card">
-              <h4>Soluciones de CCTV y Control de Acceso</h4>
-              <p>La seguridad no es negociable. Nuestros sistemas de videovigilancia y control de acceso
-                protegen tus instalaciones las 24 horas. Tus empleados pueden
-                concentrarse en lo importante, sabiendo que están seguros.</p>
-            </div>
+            
           </section>
         </main>
-        <main>
-          <section>
-            <div className="card">
-              <h4>Diseño y Arquitectura de Redes LAN</h4>
-              <p>Aquí es donde la magia sucede. Creamos redes de área local eficientes y seguras desde cero.
-                La topología, la segmentación y la redundancia son nuestro lienzo. Cada decisión está guiada por
-                la excelencia de profesionales experimentados</p>
-            </div>
-            <div className="card">
-              <h4>Rediseño de Redes Existentes</h4>
-              <p>A veces, incluso las redes necesitan un cambio de imagen. Te asesoramos para optimizar el rendimiento y la seguridad.
-                Si tu red es lenta y retrasa los procesos demora una eternidad en cargar una página, un documento, déjalo en nuestras manos,
-                evaluamos, diseñamos e implementamos la solución a la medida</p>
-            </div>
-
-          </section>
-        </main>
+        
         <br />
       </div>
       <br></br>
@@ -289,7 +258,7 @@ function App() {
           <section>
             <div className="card">
               <h4>MISION</h4>
-              <p>En AvxÜP, nuestra misión es liderar el mercado en soluciones integrales de infraestructura de redes, especializándonos en la instalación de cableado estructurado, puntos de red certificados y Fibra Óptica. Nos comprometemos a la integración experta de equipos de red, como routers y switches, para proporcionar a nuestros clientes sistemas de comunicación cohesivos y eficientes. Nuestro enfoque está en la calidad, la innovación y el servicio personalizado, asegurando que cada solución sea adaptada a las necesidades específicas y contribuya al éxito tecnológico de nuestros clientes.</p>
+              <p>En AvxÜP, nuestra misión es liderar el mercado en soluciones integrales de infraestructura de redes, especializándonos en la instalación de cableado estructurado, puntos de red certificados y Fibra Óptica. Nos comprometemos a la integración experta de equipos de red, como routers y switches, para proporcionar a nuestros clientes sistemas de comunicación cohesivos y eficientes.</p>
             </div>
             <div className="card">
               <h4>VISION</h4>
@@ -300,70 +269,7 @@ function App() {
         </main>
 
       </div>
-      <div className='servicios'>
-        <h2>Valores</h2>
-        <hr></hr>
-
-        <main>
-          <section>
-            <div className="card">
-              <h4>Calidad</h4>
-              <p>Nos comprometemos con la excelencia en cada servicio y producto que ofrecemos</p>
-            </div>
-            <div className="card">
-              <h4>Confiabilidad</h4>
-              <p>Garantizamos soluciones seguras y efectivas, construyendo una base sólida de confianza con nuestros clientes</p>
-            </div>
-            <div className="card">
-              <h4>Innovación</h4>
-              <p>Estamos en constante búsqueda de avances tecnológicos para mejorar nuestras ofertas y procesos.</p>
-            </div>
-
-          </section>
-
-        </main>
-        <main>
-          <section>
-            <div className="card">
-              <h4>Servicio al Cliente</h4>
-              <p>Priorizamos las necesidades de nuestros clientes, proporcionando atención detallada y personalizada</p>
-            </div>
-            <div className="card">
-              <h4>Trabajo en Equipo</h4>
-              <p>Valoramos la colaboración interna y externa para lograr los mejores resultadoss</p>
-            </div>
-
-
-          </section>
-        </main>
-      </div>
-      <div className='servicios'>
-        <h2>Objetivos</h2>
-        <hr></hr>
-
-        <main>
-          <section>
-            <div className="card">
-
-              <p>Ampliar nuestra gama de servicios para incluir las últimas innovaciones en Fibra Óptica y tecnología de redes</p>
-            </div>
-            <div className="card">
-
-              <p>Alcanzar la excelencia en la satisfacción del cliente a través de un soporte técnico superior y asesorías especializadas</p>
-            </div>
-            <div className="card">
-
-              <p>Invertir en el desarrollo profesional de nuestro equipo para mantenernos a la vanguardia en conocimientos y habilidades técnicas</p>
-            </div>
-            <div className="card">
-
-              <p>Implementar prácticas de sostenibilidad en todas nuestras operaciones para contribuir al cuidado del medio ambiente</p>
-            </div>
-          </section>
-
-        </main>
-
-      </div>
+      
       <div id="contacto">
         <h2>Contactanos</h2>
         <ContactForm />
