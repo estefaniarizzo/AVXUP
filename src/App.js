@@ -3,7 +3,7 @@ import { useForm, ValidationError } from '@formspree/react';
 import './App.css';
 import Vision from "./vision.png";
 import Mision from "./mision.png";
-import Logo from "./logo.png";
+import Logo from "./logo.jpg";
 import tecno from "./assets/tecno.jpg";
 import red from "./assets/red.jpg";
 import social from "./assets/social.jpg";
