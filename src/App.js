@@ -1,12 +1,17 @@
 import React, { useState, useEffect } from 'react';
 import { useForm, ValidationError } from '@formspree/react';
 import './App.css';
-
+import alied from './assets/alied.jpg';
 import Logo from "./logo.jpg";
 import tecno from "./assets/tecno.jpg";
 import red from "./assets/red.jpg";
 import social from "./assets/social.jpg";
-
+import legrant from './assets/legrant.jpg';
+import simeon from './assets/siemon.jpg';
+import pandui from './assets/pandui.jpg';
+import cisco from './assets/cisco.png';
+import alcatel from './assets/alcatel.png';
+import nokia from './assets/nokia.png';
 function ContactForm() {
   const [state, handleSubmit] = useForm("xvoezodw");
 
@@ -22,7 +27,7 @@ function ContactForm() {
   }
 
   return (
-    
+
     <div className="app-container">
       <form onSubmit={handleSubmit} className="contact-form">
         <label htmlFor="name" className="form-label">
@@ -30,11 +35,11 @@ function ContactForm() {
         </label>
         <input
           id="name"
-          type="text" 
+          type="text"
           name="name"
         />
-        <ValidationError 
-          prefix="Name" 
+        <ValidationError
+          prefix="Name"
           field="name"
           errors={state.errors}
           className="error-name"
@@ -44,11 +49,11 @@ function ContactForm() {
         </label>
         <input
           id="email"
-          type="email" 
+          type="email"
           name="email"
         />
-        <ValidationError 
-          prefix="Email" 
+        <ValidationError
+          prefix="Email"
           field="email"
           errors={state.errors}
           className="error-message"
@@ -58,11 +63,11 @@ function ContactForm() {
         </label>
         <input
           id="ciudad"
-          type="text" 
+          type="text"
           name="ciudad"
         />
-        <ValidationError 
-          prefix="Ciudad" 
+        <ValidationError
+          prefix="Ciudad"
           field="ciudad"
           errors={state.errors}
           className="error-message"
@@ -75,8 +80,8 @@ function ContactForm() {
           name="message"
           className="form-label"
         />
-        <ValidationError 
-          prefix="Message" 
+        <ValidationError
+          prefix="Message"
           field="message"
           errors={state.errors}
         />
@@ -145,7 +150,7 @@ function App() {
       clearInterval(serviciosInterval);
     };
   }, []);
-  
+
   return (
     <><div>
       <navbar>
@@ -153,6 +158,7 @@ function App() {
         <ul>
           <li><a href="#servicios">Servicios</a></li>
           <li><a href="#quienes-somos">Quienes somos</a></li>
+          <li><a href="#Nuestros-Socios">Nuestros Socios</a></li>
           <li><a href="#contacto">Contactanos</a></li>
         </ul>
       </navbar>
@@ -203,10 +209,10 @@ function App() {
                 de mantenimiento preventivo y correctivos para mantener tu red en su mejor forma.
                 Y si surge algún problema, actuamos con la mayor velocidad posible. Tu tranquilidad es nuestra prioridad.</p>
             </div>
-            
+
           </section>
         </main>
-        
+
         <br />
       </div>
       <br></br>
@@ -253,7 +259,7 @@ function App() {
       <div id="quienes-somos" className='servicios'>
         <h2>Quienes somos</h2>
         <hr></hr>
-        <p className='p-servicios'>AvxÜP Solutions SAS.  Es una empresa colombiana que ofrece soluciones integrales en el campo de las redes y las telecomunicaciones. Nuestra misión es brindar a nuestros clientes servicios de calidad, eficiencia y seguridad, adaptados a sus necesidades y expectativas. Contamos con un equipo de profesionales altamente cualificados y con amplia experiencia en el sector, que se encargan de diseñar, instalar y mantener sistemas de cableado estructurado, fibra óptica, equipos de comunicaciones como switch, routers y otros dispositivos relacionados con las redes. Nuestros valores son la innovación, el compromiso, la responsabilidad y la satisfacción del cliente. Nuestra visión es ser una empresa líder y referente en el mercado de las redes y las telecomunicaciones, ofreciendo soluciones a medida, personalizadas y de vanguardia. Si quieres saber más sobre nosotros, puedes contactarnos a través de nuestro formulario web, nuestro correo electrónico o nuestro teléfono. Estaremos encantados de atenderte y de ofrecerte la mejor solución para tu proyecto.</p>
+
         <main>
           <section>
             <div className="card">
@@ -269,14 +275,48 @@ function App() {
         </main>
 
       </div>
-      
+      <div id="Nuestros-Socios" className='servicios'>
+        <h2>Nuestros Socios</h2>
+        <hr></hr>
+
+        <main>
+          <section>
+            <div className="card">
+              <img src={alied} alt="Alied" />
+            </div>
+            <div className="card">
+              <img src={legrant} alt="Legrant" />
+            </div>
+            <div className="card">
+              <img src={simeon} alt="Simeon" />
+            </div>
+            <div className="card">
+              <img src={pandui} alt="Pandui" />
+            </div>
+          </section>
+        </main>
+        <main>
+          <section>
+            <div className="card">
+              <img src={cisco} alt="Cisco" />
+            </div>
+            <div className="card">
+              <img src={alcatel} alt="Alcatel" />
+            </div>
+            <div className="card">
+              <img src={nokia} alt="Nokia" />
+            </div>
+            
+          </section>
+        </main>
+      </div>
       <div id="contacto">
         <h2>Contactanos</h2>
         <ContactForm />
       </div>
       <br></br>
     </div>
-    <footer className="footer">
+      <footer className="footer">
         <div className="footer-container">
           <div className="footer-info">
             <p>AvxÜP Solutions SAS</p>
