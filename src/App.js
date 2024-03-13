@@ -1,17 +1,8 @@
 import React, { useState, useEffect } from 'react';
 import { useForm, ValidationError } from '@formspree/react';
 import './App.css';
-import alied from './assets/alied.jpg';
 import Logo from "./logo.jpg";
-import tecno from "./assets/tecno.jpg";
-import red from "./assets/red.jpg";
-import social from "./assets/social.jpg";
-import legrant from './assets/legrant.jpg';
-import simeon from './assets/siemon.jpg';
-import pandui from './assets/pandui.jpg';
-import cisco from './assets/cisco.png';
-import alcatel from './assets/alcatel.png';
-import nokia from './assets/nokia.png';
+import Slider from './slider';
 function ContactForm() {
   const [state, handleSubmit] = useForm("xvoezodw");
 
@@ -104,26 +95,6 @@ function ContactForm() {
   );
 }
 
-function Carrusel() {
-  const images = [tecno, red, social];
-  const [currentIndex, setCurrentIndex] = useState(0);
-
-  useEffect(() => {
-    const interval = setInterval(() => {
-      setCurrentIndex((prevIndex) => (prevIndex + 1) % images.length);
-    }, 3000); // Cambia de imagen cada 3 segundos
-
-    return () => clearInterval(interval); // Limpia el intervalo cuando el componente se desmonta
-  }, [images.length]);
-
-  return (
-    <div className="carrusel-container"> {/* Contenedor adicional */}
-      <div className="carrusel"> {/* Carrusel */}
-        <img src={images[currentIndex]} alt={`Imagen ${currentIndex + 1}`} />
-      </div>
-    </div>
-  );
-}
 
 function App() {
   const [clientes, setClientes] = useState(1);
@@ -158,18 +129,15 @@ function App() {
         <ul>
           <li><a href="#servicios">Servicios</a></li>
           <li><a href="#quienes-somos">Quienes somos</a></li>
-          <li><a href="#Nuestros-Socios">Nuestros Socios</a></li>
           <li><a href="#contacto">Contactanos</a></li>
         </ul>
       </navbar>
       <br />
       <br />
       <br />
-
-
-      <Carrusel />
-      <br></br>
-
+      <br />
+      <br />
+      <Slider/>
       <div id="servicios" className='servicios'>
         <h2>Nuestros Servicios</h2>
         <hr></hr>
@@ -215,6 +183,7 @@ function App() {
 
         <br />
       </div>
+      
       <br></br>
       <div class="section-counter paralax-mf bg-image">
         <div class="overlay-mf"></div>
@@ -275,41 +244,7 @@ function App() {
         </main>
 
       </div>
-      <div id="Nuestros-Socios" className='servicios'>
-        <h2>Nuestros Socios</h2>
-        <hr></hr>
-
-        <main>
-          <section>
-            <div className="card">
-              <img src={alied} alt="Alied" />
-            </div>
-            <div className="card">
-              <img src={legrant} alt="Legrant" />
-            </div>
-            <div className="card">
-              <img src={simeon} alt="Simeon" />
-            </div>
-            <div className="card">
-              <img src={pandui} alt="Pandui" />
-            </div>
-          </section>
-        </main>
-        <main>
-          <section>
-            <div className="card">
-              <img src={cisco} alt="Cisco" />
-            </div>
-            <div className="card">
-              <img src={alcatel} alt="Alcatel" />
-            </div>
-            <div className="card">
-              <img src={nokia} alt="Nokia" />
-            </div>
-            
-          </section>
-        </main>
-      </div>
+      
       <div id="contacto">
         <h2>Contactanos</h2>
         <ContactForm />
