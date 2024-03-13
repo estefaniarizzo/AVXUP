@@ -137,6 +137,8 @@ function App() {
       <br />
       <br />
       <br />
+      <h2>Aliados Tecnologicos</h2>
+      <hr></hr>
       <Slider/>
       <div id="servicios" className='servicios'>
         <h2>Nuestros Servicios</h2>
