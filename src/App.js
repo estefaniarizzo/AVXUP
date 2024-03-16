@@ -139,53 +139,26 @@ function App() {
       <br />
       <h2>Aliados Tecnologicos</h2>
       <hr></hr>
-      <Slider/>
-      <div id="servicios" className='servicios'>
-        <h2>Nuestros Servicios</h2>
+      <Slider />
+      <h2 className='h2'>Nuestros Servicios</h2>
+      <div id="servicios" className='servicios' style={{ textAlign: 'center' }}>
+        
         <hr></hr>
-        <main>
-          <section>
-            <div className="card">
-              <h4>Cableado Estructurado y Fibra Óptica</h4>
-              <p>Nuestra especialidad radica en diseñar e implementar sistemas de cableado estructurado
-                y fibra óptica. Estos no solo garantizan una conectividad confiable, sino también una base sólida
-                para el crecimiento futuro de tu empresa. Imagina cada cable como un hilo que teje la red de posibilidades para tu éxito</p>
-            </div>
-            <div className="card">
-              <h4>Instalación Puntos de Red Certificados</h4>
-              <p>No se trata solo de conectar cables. Creamos puntos de acceso estratégicos que cumplen con rigurosos
-                estándares de certificación. La señal fluye sin interrupciones, desde la sala de juntas hasta el rincón
-                más alejado. Tu empresa está respaldada por una infraestructura robusta.</p>
-            </div>
-            <div className="card">
-              <h4>Integración de Dispositivos de Red</h4>
-              <p>Configuramos switches, routers y servidores con precisión quirúrgica.
-                Cada dispositivo es una pieza clave en el rompecabezas de tu red.
-                La sincronización perfecta garantiza una comunicación fluida y una experiencia sin tropiezos.</p>
-            </div>
-          </section>
-        </main>
-        <main>
-          <section>
-            <div className="card">
-              <h4>Traslado de Datacenter y Organización de Racks</h4>
-              <p>Imagina mudar un edificio entero sin que nadie lo note. Eso es lo que hacemos.
-                Nuestro equipo se encarga de trasladar datacenters sin interrupciones. Además,
-                organizamos tus racks como un maestro ajedrecista: eficiencia y orden en cada movimiento.</p>
-            </div>
-            <div className="card">
-              <h4>Mantenimientos Preventivos y Correctivos</h4>
-              <p>No esperamos a que algo falle. Establecemos programas
-                de mantenimiento preventivo y correctivos para mantener tu red en su mejor forma.
-                Y si surge algún problema, actuamos con la mayor velocidad posible. Tu tranquilidad es nuestra prioridad.</p>
-            </div>
 
-          </section>
-        </main>
-
+        <div className="video-container" style={{ display: 'inline-block' }}>
+          <iframe
+            width="560"
+            height="315"
+            src="https://www.youtube.com/embed/r4fkshmfVdU"
+            title="YouTube video player"
+            frameBorder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowFullScreen
+          ></iframe>
+        </div>
         <br />
       </div>
-      
+
       <br></br>
       <div class="section-counter paralax-mf bg-image">
         <div class="overlay-mf"></div>
@@ -246,7 +219,7 @@ function App() {
         </main>
 
       </div>
-      
+
       <div id="contacto">
         <h2>Contactanos</h2>
         <ContactForm />
