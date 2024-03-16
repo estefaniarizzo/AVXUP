@@ -3,6 +3,10 @@ import { useForm, ValidationError } from '@formspree/react';
 import './App.css';
 import Logo from "./logo.jpg";
 import Slider from './slider';
+import compromiso from './assets/compromiso.jpg';
+import innovacion from './assets/innovar.jpg';
+import cliente from './assets/cliente.jpg';
+import responsable from './assets/responsabilidad.jpg';
 function ContactForm() {
   const [state, handleSubmit] = useForm("xvoezodw");
 
@@ -142,7 +146,7 @@ function App() {
       <Slider />
       <h2 className='h2'>Nuestros Servicios</h2>
       <div id="servicios" className='servicios' style={{ textAlign: 'center' }}>
-        
+
         <hr></hr>
 
         <div className="video-container" style={{ display: 'inline-block' }}>
@@ -203,10 +207,11 @@ function App() {
       <div id="quienes-somos" className='servicios'>
         <h2>Quienes somos</h2>
         <hr></hr>
-
+        <p className='p'>AvxÜP Solutions SAS.  Es una empresa colombiana que ofrece soluciones integrales en el campo de las redes y las telecomunicaciones. Contamos con un equipo de profesionales altamente cualificados y con amplia experiencia en el sector, que se encargan de diseñar, instalar y mantener sistemas de cableado estructurado, fibra óptica, equipos de comunicaciones como switch, routers y otros dispositivos relacionados con las redes.</p>
         <main>
           <section>
             <div className="card">
+
               <h4>MISION</h4>
               <p>En AvxÜP, nuestra misión es liderar el mercado en soluciones integrales de infraestructura de redes, especializándonos en la instalación de cableado estructurado, puntos de red certificados y Fibra Óptica. Nos comprometemos a la integración experta de equipos de red, como routers y switches, para proporcionar a nuestros clientes sistemas de comunicación cohesivos y eficientes.</p>
             </div>
@@ -217,7 +222,28 @@ function App() {
 
           </section>
         </main>
-
+        <h2>Nuestros Valores</h2>
+        <hr></hr>
+        <main>
+        <section>
+            <div className="card">
+              <h4>INNOVACION</h4>
+              <img src={innovacion} alt="Innovacion" style={{ maxWidth: '200px', maxHeight: '200px' }}/>
+            </div>
+            <div className="card">
+              <h4>COMPROMISO</h4>
+              <img src={compromiso} alt="Compromiso" style={{ maxWidth: '200px', maxHeight: '200px' }}/>
+            </div>
+            <div className="card">
+              <h4>RESPONSABILIDAD</h4>
+              <img src={responsable} alt="Responsable" style={{ maxWidth: '200px', maxHeight: '200px' }}/>
+            </div>
+            <div className="card">
+              <h4>SERVICIO AL CLIENTE</h4>
+              <img src={cliente} alt="Cliente" style={{ maxWidth: '200px', maxHeight: '200px' }}/>
+            </div>
+          </section>
+        </main>
       </div>
 
       <div id="contacto">
