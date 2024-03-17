@@ -181,7 +181,7 @@ function App() {
 
         <div className="video-container" style={{ display: 'inline-block' }}>
           <iframe
-            width="460"
+            width="400"
             height="315"
             src="https://www.youtube.com/embed/r4fkshmfVdU"
             title="YouTube video player"
