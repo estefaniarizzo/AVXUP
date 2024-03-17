@@ -139,7 +139,7 @@ function App() {
         <img src={Logo} alt="AVX UP Logo" /> <h6 className='h5'>Redes y Tecnologías</h6>
         <ul>
           <li><a href="#servicios">Servicios</a></li>
-          <li><a href="#quienes-somos">Quienes somos</a></li>
+          <li><a href="#quienes-somos">Nosotros</a></li>
           <li><a href="#contacto">Contactanos</a></li>
         </ul>
       </navbar>
@@ -225,7 +225,7 @@ function App() {
         </div>
       </div>
       <div id="quienes-somos" className='servicios'>
-        <h2>Quienes somos</h2>
+        <h2>Nosotros</h2>
         <hr></hr>
         <p className='p'>AvxÜP Solutions SAS.  Es una empresa colombiana que ofrece soluciones integrales en el campo de las redes y las telecomunicaciones. Contamos con un equipo de profesionales altamente cualificados y con amplia experiencia en el sector, que se encargan de diseñar, instalar y mantener sistemas de cableado estructurado, fibra óptica, equipos de comunicaciones como switch, routers y otros dispositivos relacionados con las redes.</p>
         <main>
