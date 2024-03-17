@@ -370,7 +370,12 @@ input{
     flex-direction: column; /* Cambia la dirección del flexbox para que las tarjetas se apilen verticalmente */
   }
 }
-
+@media (max-width: 768px) {
+  .video-container iframe {
+    width: 100%; /* Ajusta el ancho del iframe al 100% del contenedor */
+    height: auto; /* Ajusta la altura automáticamente para mantener la proporción */
+  }
+}
 
 .card {
   background-color: white;
