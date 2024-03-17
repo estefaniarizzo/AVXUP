@@ -2,11 +2,18 @@ import React, { useState, useEffect } from 'react';
 import { useForm, ValidationError } from '@formspree/react';
 import './App.css';
 import Logo from "./logo.jpg";
-import Slider from './slider';
+//import Slider from './slider';
 import compromiso from './assets/compromiso.jpg';
 import innovacion from './assets/innovar.jpg';
 import cliente from './assets/cliente.jpg';
 import responsable from './assets/responsabilidad.jpg';
+
+import alied from './assets/alied.jpg';
+import legrant from './assets/legrant.jpg';
+import siemon from './assets/siemon.jpg';
+import pandui from './assets/pandui.jpg';
+import cisco from './assets/cisco.png';
+import alcatel from './assets/alcatel.png';
 function ContactForm() {
   const [state, handleSubmit] = useForm("xvoezodw");
 
@@ -143,7 +150,30 @@ function App() {
       <br />
       <h2>Aliados Tecnologicos</h2>
       <hr></hr>
-      <Slider />
+      <div className='servicios'>
+      <main>
+          <section >
+            <div className="card-socios">
+            <img src={alied} alt="Cliente" style={{ maxWidth: '150px', maxHeight: '150px' }}/>
+            </div>
+            <div className="card-socios">
+            <img src={alcatel} alt="Cliente" style={{ maxWidth: '150px', maxHeight: '150px' }}/>
+            </div>
+            <div className="card-socios">
+            <img src={cisco} alt="Cliente" style={{ maxWidth: '150px', maxHeight: '150px' }}/>
+            </div>
+            <div className="card-socios">
+            <img src={legrant} alt="Cliente" style={{ maxWidth: '150px', maxHeight: '150px' }}/>
+            </div>
+            <div className="card-socios">
+            <img src={siemon} alt="Cliente" style={{maxWidth: '150px', maxHeight: '150px' }}/>
+            </div>
+            <div className="card-socios">
+            <img src={pandui} alt="Cliente" style={{ maxWidth: '150px', maxHeight: '150px' }}/>
+            </div>
+          </section>
+        </main></div>
+        <br></br>
       <h2 className='h2'>Nuestros Servicios</h2>
       <div id="servicios" className='servicios' style={{ textAlign: 'center' }}>
 
@@ -151,7 +181,7 @@ function App() {
 
         <div className="video-container" style={{ display: 'inline-block' }}>
           <iframe
-            width="560"
+            width="460"
             height="315"
             src="https://www.youtube.com/embed/r4fkshmfVdU"
             title="YouTube video player"
@@ -222,6 +252,8 @@ function App() {
 
           </section>
         </main>
+
+        
         <h2>Nuestros Valores</h2>
         <hr></hr>
         <main>
