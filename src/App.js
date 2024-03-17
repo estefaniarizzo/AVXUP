@@ -196,7 +196,7 @@ function App() {
       <br></br>
       <div class="section-counter paralax-mf bg-image">
         <div class="overlay-mf"></div>
-        <div class="container position-relative">
+        <div class="container position-relative"style={{margin: '5px' }}>
           <div class="row">
             <div class="col-sm-4 col-lg-4">
               <div class="counter-box counter-box pt-4 pt-md-0">
@@ -205,21 +205,11 @@ function App() {
                 </div>
                 <div class="counter-num">
                   <p class="counter">{clientes}</p>
-                  <span class="counter-text">CLIENTES</span>
+                  <span class="counter-text"style={{fontSize: '15px' }}>CLIENTES</span>
                 </div>
               </div>
             </div>
-            <div class="col-sm-4 col-lg-4">
-              <div class="counter-box pt-4 pt-md-0">
-                <div class="counter-ico">
-                  <span class="ico-circle"><i class="bi bi-geo-alt"></i></span>
-                </div>
-                <div class="counter-num">
-                  <p class="counter">{ciudades}</p>
-                  <span class="counter-text">CIUDADES</span>
-                </div>
-              </div>
-            </div>
+           
             <div class="col-sm-4 col-lg-4">
               <div class="counter-box pt-4 pt-md-0">
                 <div class="counter-ico">
@@ -227,7 +217,7 @@ function App() {
                 </div>
                 <div class="counter-num">
                   <p class="counter">{servicios}</p>
-                  <span class="counter-text">SERVICIOS</span>
+                  <span class="counter-text"style={{fontSize: '15px' }}>SERVICIOS</span>
                 </div>
               </div>
             </div>
