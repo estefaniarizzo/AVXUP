@@ -14,24 +14,42 @@ import siemon from './assets/siemon.jpg';
 import pandui from './assets/pandui.jpg';
 import cisco from './assets/cisco.png';
 import alcatel from './assets/alcatel.png';
+
 function ContactForm() {
   const [state, handleSubmit] = useForm("xrgnaqpy");
+  const [formData, setFormData] = useState({
+    name: '',
+    email: '',
+    ciudad: '',
+    message: ''
+  });
 
-  if (state.succeeded) {
-    // Muestra una alerta si el envío fue exitoso
-    alert('Thanks for joining!');
+  const handleChange = (e) => {
+    const { name, value } = 
+e.target
+;
+    setFormData(prevState => ({
+      ...prevState,
+      [name]: value
+    }));
+  };
 
-    // Resetea los valores de los campos del formulario
-    document.getElementById('name').value = '';
-    document.getElementById('email').value = '';
-    document.getElementById('ciudad').value = '';
-    document.getElementById('message').value = '';
-  }
+  const handleFormSubmit = async (e) => {
+    e.preventDefault();
+    await handleSubmit(e);
+    if (state.succeeded) {
+      setFormData({
+        name: '',
+        email: '',
+        ciudad: '',
+        message: ''
+      });
+    }
+  };
 
   return (
-
     <div className="app-container">
-      <form onSubmit={handleSubmit} className="contact-form">
+      <form onSubmit={handleFormSubmit} className="contact-form">
         <label htmlFor="name" className="form-label">
           Nombre
         </label>
@@ -39,6 +57,10 @@ function ContactForm() {
           id="name"
           type="text"
           name="name"
+          value={
+formData.name
+}
+          onChange={handleChange}
         />
         <ValidationError
           prefix="Name"
@@ -53,6 +75,10 @@ function ContactForm() {
           id="email"
           type="email"
           name="email"
+          value={
+formData.email
+}
+          onChange={handleChange}
         />
         <ValidationError
           prefix="Email"
@@ -67,6 +93,8 @@ function ContactForm() {
           id="ciudad"
           type="text"
           name="ciudad"
+          value={formData.ciudad}
+          onChange={handleChange}
         />
         <ValidationError
           prefix="Ciudad"
@@ -74,12 +102,14 @@ function ContactForm() {
           errors={state.errors}
           className="error-message"
         />
-        <label htmlFor="text" className="form-label">
+        <label htmlFor="message" className="form-label">
           Mensaje
         </label>
         <textarea
           id="message"
           name="message"
+          value={formData.message}
+          onChange={handleChange}
           className="form-label"
         />
         <ValidationError
@@ -104,7 +134,7 @@ function ContactForm() {
       </form>
     </div>
   );
-}
+} 
 
 
 function App() {
