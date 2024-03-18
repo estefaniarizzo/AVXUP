@@ -15,7 +15,7 @@ import pandui from './assets/pandui.jpg';
 import cisco from './assets/cisco.png';
 import alcatel from './assets/alcatel.png';
 function ContactForm() {
-  const [state, handleSubmit] = useForm("xvoezodw");
+  const [state, handleSubmit] = useForm("xrgnaqpy");
 
   if (state.succeeded) {
     // Muestra una alerta si el envío fue exitoso
