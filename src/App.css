@@ -15,6 +15,7 @@ body{
 .nosotros-container {
   display: flex;
   align-items: center;
+  margin-top: 100px;
 }
 
 .mosaico {
@@ -28,17 +29,29 @@ body{
   gap: 10px; /* Espacio entre las imágenes */
 }
 
-.texto {
-  flex: 1; /* El texto ocupa el espacio restante */
-  padding: 0 20px; /* Espaciado alrededor del texto */
+.imagen-container {
+  position: relative; /* Posición relativa para el contenedor de imagen */
 }
 
-.texto h2 {
-  margin-bottom: 10px; /* Espaciado inferior del título */
+.overlay {
+  position: absolute; /* Posición absoluta para el overlay */
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5); /* Color de fondo semi-transparente */
+  display: none; /* Inicialmente oculto */
+  justify-content: center;
+  align-items: center;
 }
 
-.texto p {
-  line-height: 1.5; /* Altura de línea del párrafo */
+.fila-img:hover + .overlay {
+  display: flex; /* Mostrar el overlay cuando se pasa el cursor sobre la imagen */
+}
+
+.overlay-text {
+  color: white; /* Color del texto */
+  font-size: 20px; /* Tamaño de fuente */
 }
 
 @media (max-width: 768px) {
@@ -67,6 +80,33 @@ body{
   .texto {
     padding: 10px; /* Reducir el espacio alrededor del texto en dispositivos móviles más pequeños */
   }
+}
+
+.button {
+  --bg: #473ce7;
+  --text-color: #fff;
+  position: relative;
+  width: 190px;
+  border: none;
+  background: var(--bg);
+  color: var(--text-color);
+  padding: 1em;
+  font-weight: bold;
+  text-transform: uppercase;
+  transition: 0.2s;
+  border-radius: 5px;
+  opacity: 0.8;
+  letter-spacing: 1px;
+  box-shadow: #2b41c0 0px 7px 2px, #000 0px 8px 5px;
+}
+
+.button:hover {
+  opacity: 1;
+}
+
+.button:active {
+  top: 4px;
+  box-shadow: #3a2bc0 0px 3px 2px,#000 0px 3px 5px;
 }
 
 .app-container {
@@ -99,6 +139,7 @@ navbar {
   
   display: flex;
   align-items: center; /* Para centrar verticalmente el contenido */
+  z-index: 1000;
 }
 
 

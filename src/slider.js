@@ -1,14 +1,10 @@
 import { useState, useEffect } from 'react';
-import alied from './assets/alied.jpg';
-import legrant from './assets/legrant.jpg';
-import siemon from './assets/siemon.jpg';
-import pandui from './assets/pandui.jpg';
-import cisco from './assets/cisco.png';
-import alcatel from './assets/alcatel.png';
-
+import tecno from "./assets/tecno.jpg";
+import red from "./assets/red.jpg";
+import social from "./assets/social.jpg";
 import './App.css';
-function Slider() {
-  const images = [alied, legrant, siemon, pandui, cisco, alcatel]; // Lista de imágenes para el slider
+function Carrusel() {
+  const images = [tecno, red, social];
   const [currentIndex, setCurrentIndex] = useState(0);
 
   useEffect(() => {
@@ -20,16 +16,11 @@ function Slider() {
   }, [images.length]);
 
   return (
-    <div className="slider-container">
-      <div className="slider">
-        {images.map((image, index) => (
-          <div key={index} className={index === currentIndex ? 'slide active' : 'slide'}>
-            <img src={image} alt={`Imagen ${index + 1}`} />
-          </div>
-        ))}
+    <div className="carrusel-container"> {/* Contenedor adicional */}
+      <div className="carrusel"> {/* Carrusel */}
+        <img src={images[currentIndex]} alt={`Imagen ${currentIndex + 1}`} />
       </div>
     </div>
   );
 }
-
-export default Slider;
+export default Carrusel;
