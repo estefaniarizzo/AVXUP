@@ -7,7 +7,9 @@ import compromiso from './assets/compromiso.jpg';
 import innovacion from './assets/innovar.jpg';
 import cliente from './assets/cliente.jpg';
 import responsable from './assets/responsabilidad.jpg';
-
+import tecno from "./assets/tecno.jpg";
+import red from "./assets/red.jpg";
+import social from "./assets/social.jpg";
 import alied from './assets/alied.jpg';
 import legrant from './assets/legrant.jpg';
 import siemon from './assets/siemon.jpg';
@@ -16,22 +18,37 @@ import cisco from './assets/cisco.png';
 import alcatel from './assets/alcatel.png';
 function ContactForm() {
   const [state, handleSubmit] = useForm("xvoezodw");
+  const [formData, setFormData] = useState({
+    name: '',
+    email: '',
+    ciudad: '',
+    message: ''
+  });
 
-  if (state.succeeded) {
-    // Muestra una alerta si el envío fue exitoso
-    alert('Thanks for joining!');
+  const handleChange = (e) => {
+    const { name, value } = e.target;
+    setFormData(prevState => ({
+      ...prevState,
+      [name]: value
+    }));
+  };
 
-    // Resetea los valores de los campos del formulario
-    document.getElementById('name').value = '';
-    document.getElementById('email').value = '';
-    document.getElementById('ciudad').value = '';
-    document.getElementById('message').value = '';
-  }
+  const handleFormSubmit = async (e) => {
+    e.preventDefault();
+    await handleSubmit(e);
+    if (state.succeeded) {
+      setFormData({
+        name: '',
+        email: '',
+        ciudad: '',
+        message: ''
+      });
+    }
+  };
 
   return (
-
     <div className="app-container">
-      <form onSubmit={handleSubmit} className="contact-form">
+      <form onSubmit={handleFormSubmit} className="contact-form">
         <label htmlFor="name" className="form-label">
           Nombre
         </label>
@@ -39,6 +56,8 @@ function ContactForm() {
           id="name"
           type="text"
           name="name"
+          value={formData.name}
+          onChange={handleChange}
         />
         <ValidationError
           prefix="Name"
@@ -53,6 +72,8 @@ function ContactForm() {
           id="email"
           type="email"
           name="email"
+          value={formData.email}
+          onChange={handleChange}
         />
         <ValidationError
           prefix="Email"
@@ -67,6 +88,8 @@ function ContactForm() {
           id="ciudad"
           type="text"
           name="ciudad"
+          value={formData.ciudad}
+          onChange={handleChange}
         />
         <ValidationError
           prefix="Ciudad"
@@ -74,12 +97,14 @@ function ContactForm() {
           errors={state.errors}
           className="error-message"
         />
-        <label htmlFor="text" className="form-label">
+        <label htmlFor="message" className="form-label">
           Mensaje
         </label>
         <textarea
           id="message"
           name="message"
+          value={formData.message}
+          onChange={handleChange}
           className="form-label"
         />
         <ValidationError
@@ -105,11 +130,57 @@ function ContactForm() {
     </div>
   );
 }
+function Carrusel() {
+  const images = [tecno, red, social];
+  const [currentIndex, setCurrentIndex] = useState(0);
 
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setCurrentIndex((prevIndex) => (prevIndex + 1) % images.length);
+    }, 3000); // Cambia de imagen cada 3 segundos
+
+    return () => clearInterval(interval); // Limpia el intervalo cuando el componente se desmonta
+  }, [images.length]);
+
+  return (
+    <div className="carrusel-container"> {/* Contenedor adicional */}
+      <div className="carrusel"> {/* Carrusel */}
+        <img src={images[currentIndex]} alt={`Imagen ${currentIndex + 1}`} />
+      </div>
+    </div>
+  );
+}
+
+function Nosotros() {
+  return (
+    <div id="quienes-somos" className='servicios2'>
+      <div className="nosotros-container">
+        <div className="mosaico">
+          <div className="fila">
+          <img src={innovacion} alt="Innovacion" style={{ maxWidth: '300px', maxHeight: '300px' }}/>
+          <img src={compromiso} alt="Innovacion" style={{ maxWidth: '300px', maxHeight: '300px' }}/>
+          </div>
+          <br/>
+          <div className="fila">
+          <img src={responsable} alt="Innovacion" style={{ maxWidth: '300px', maxHeight: '300px' }}/>
+          <img src={cliente} alt="Innovacion" style={{ maxWidth: '300px', maxHeight: '300px' }}/>
+          </div>
+        </div>
+        <div className="texto">
+          <h2>Nosotros</h2>
+          <hr />
+          <p className='p'>
+            AvxÜP Solutions SAS. Es una empresa colombiana que ofrece soluciones integrales en el campo de las redes y las telecomunicaciones. Contamos con un equipo de profesionales altamente cualificados y con amplia experiencia en el sector, que se encargan de diseñar, instalar y mantener sistemas de cableado estructurado, fibra óptica, equipos de comunicaciones como switch, routers y otros dispositivos relacionados con las redes.
+          </p>
+        </div>
+      </div>
+    </div>
+  );
+}
 
 function App() {
   const [clientes, setClientes] = useState(1);
-  const [ciudades, setCiudades] = useState(1);
+  
   const [servicios, setServicios] = useState(1);
 
 
@@ -118,9 +189,7 @@ function App() {
       setClientes((clientes) => (clientes < 10 ? clientes + 1 : 10));
     }, 1000);
 
-    const ciudadesInterval = setInterval(() => {
-      setCiudades((ciudades) => (ciudades < 50 ? ciudades + 1 : 50));
-    }, 1000);
+    
 
     const serviciosInterval = setInterval(() => {
       setServicios((servicios) => (servicios < 20 ? servicios + 1 : 20));
@@ -128,7 +197,7 @@ function App() {
 
     return () => {
       clearInterval(clientesInterval);
-      clearInterval(ciudadesInterval);
+      
       clearInterval(serviciosInterval);
     };
   }, []);
@@ -139,15 +208,19 @@ function App() {
         <img src={Logo} alt="AVX UP Logo" /> <h6 className='h5'>Redes y Tecnologías</h6>
         <ul>
           <li><a href="#servicios">Servicios</a></li>
-          <li><a href="#quienes-somos">Nosotros</a></li>
+          <li><a href="#quienes-somos">Quienes somos</a></li>
           <li><a href="#contacto">Contactanos</a></li>
         </ul>
       </navbar>
       <br />
       <br />
       <br />
+      <Carrusel/>
       <br />
       <br />
+      <Nosotros/>
+      
+
       <h2>Aliados Tecnologicos</h2>
       <hr></hr>
       <div className='servicios'>
@@ -183,7 +256,7 @@ function App() {
           <iframe
             width="400"
             height="315"
-            src="https://www.youtube.com/embed/r4fkshmfVdU"
+            src="https://www.youtube.com/embed/MP2vv0kw3Ys"
             title="YouTube video player"
             frameBorder="0"
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
@@ -224,50 +297,7 @@ function App() {
           </div>
         </div>
       </div>
-      <div id="quienes-somos" className='servicios'>
-        <h2>Nosotros</h2>
-        <hr></hr>
-        <p className='p'>AvxÜP Solutions SAS.  Es una empresa colombiana que ofrece soluciones integrales en el campo de las redes y las telecomunicaciones. Contamos con un equipo de profesionales altamente cualificados y con amplia experiencia en el sector, que se encargan de diseñar, instalar y mantener sistemas de cableado estructurado, fibra óptica, equipos de comunicaciones como switch, routers y otros dispositivos relacionados con las redes.</p>
-        <main>
-          <section>
-            <div className="card">
-
-              <h4>MISION</h4>
-              <p>En AvxÜP, nuestra misión es liderar el mercado en soluciones integrales de infraestructura de redes, especializándonos en la instalación de cableado estructurado, puntos de red certificados y Fibra Óptica. Nos comprometemos a la integración experta de equipos de red, como routers y switches, para proporcionar a nuestros clientes sistemas de comunicación cohesivos y eficientes.</p>
-            </div>
-            <div className="card">
-              <h4>VISION</h4>
-              <p>Nuestra visión es ser el referente en diseño, implementación y mantenimiento de redes, impulsando la innovación tecnológica y la eficiencia operativa. Nos proyectamos como el aliado estratégico esencial para el éxito tecnológico de nuestros clientes, ofreciendo asesorías personalizadas y soluciones que se anticipan a las necesidades del mercado.</p>
-            </div>
-
-          </section>
-        </main>
-
-        
-        <h2>Nuestros Valores</h2>
-        <hr></hr>
-        <main>
-        <section>
-            <div className="card">
-              <h4>INNOVACION</h4>
-              <img src={innovacion} alt="Innovacion" style={{ maxWidth: '200px', maxHeight: '200px' }}/>
-            </div>
-            <div className="card">
-              <h4>COMPROMISO</h4>
-              <img src={compromiso} alt="Compromiso" style={{ maxWidth: '200px', maxHeight: '200px' }}/>
-            </div>
-            <div className="card">
-              <h4>RESPONSABILIDAD</h4>
-              <img src={responsable} alt="Responsable" style={{ maxWidth: '200px', maxHeight: '200px' }}/>
-            </div>
-            <div className="card">
-              <h4>SERVICIO AL CLIENTE</h4>
-              <img src={cliente} alt="Cliente" style={{ maxWidth: '200px', maxHeight: '200px' }}/>
-            </div>
-          </section>
-        </main>
-      </div>
-
+      
       <div id="contacto">
         <h2>Contactanos</h2>
         <ContactForm />
