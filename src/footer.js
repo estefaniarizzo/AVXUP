@@ -1,5 +1,9 @@
 import React from 'react';
 import './App.css';
+import insta from './assets/insta.jpg';
+import linkedin from './assets/linkedin.jpg';
+import tiktok from './assets/tiktok.png';
+import face from './assets/Facebook.png';
 function Footer() {
   return (
     <footer className="footer">
@@ -10,15 +14,22 @@ function Footer() {
           <p>Calle 16CBIS #98ª-97 Bogotá D.C</p>
         </div>
         <div className="footer-contact">
-          <p>Correo: avxupsas@outlook.es</p>
-          <p>Celular: 3132328996</p>
+          <p>avxupsas@outlook.es</p>
         </div>
         <div className="footer-social">
-          <p>Facebook: AvxÜP Solutions SAS</p>
-          <p>TikTok: avxupsolutions</p>
-          <p>X:  @AvxupSAS</p>
-          <p>LinkedIn: AvxÜP Solutions SAS</p>
-          <p>Instagram: avxupSolutions</p>
+          
+          <a href="https://www.facebook.com/profile.php?id=61556074814226" target="_blank" rel="noopener noreferrer">
+            <img style={{ height: '30px', marginRight:'15px'}} src={face} alt="Twitter" />
+          </a>
+          <a href="https://www.tiktok.com/@avxupsolutions" target="_blank" rel="noopener noreferrer">
+            <img style={{ height: '30px', marginRight:'15px'}} src={tiktok} alt="Twitter" />
+          </a>
+          <a href="https://www.linkedin.com/company/avx%C3%BCp-solutions-sas/" target="_blank" rel="noopener noreferrer">
+            <img style={{ height: '30px', marginRight:'15px'}} src={linkedin} alt="Twitter" />
+          </a>
+          <a href="https://www.instagram.com/avxupsolutions/" target="_blank" rel="noopener noreferrer">
+            <img style={{ height: '30px' }} src={insta} alt="Twitter" />
+          </a>
         </div>
       </div>
     </footer>

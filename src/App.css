@@ -6,7 +6,12 @@ body{
   font-style: normal;
   cursor:context-menu;
 }
-
+.logotipo{
+  height: 90px;
+}
+.h5{
+  font-size: 18px;
+}
 .servicios2 {
   display: flex;
   justify-content: space-between;
@@ -469,7 +474,11 @@ input{
 .card-socios p {
   color: #333;
 }
-
+.video-container iframe {
+  width: 450px; /* Ajusta el ancho del iframe al 100% del contenedor */
+  height: 300px; /* Ajusta la altura automáticamente para mantener la proporción */
+ margin-left: 300px;
+}
 /* Media query para dispositivos con un ancho máximo de 768px (típicamente dispositivos móviles) */
 @media (max-width: 768px) {
   .servicios main section {
@@ -480,10 +489,32 @@ input{
   .video-container iframe {
     width: 100%; /* Ajusta el ancho del iframe al 100% del contenedor */
     height: auto; /* Ajusta la altura automáticamente para mantener la proporción */
+   
   }
 }
 
+/* Estilo básico para el contenedor del botón de WhatsApp */
+#whatsapp-container {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 1000; /* Asegura que el botón esté en la parte superior */
+}
 
+/* Estilo para el botón de WhatsApp */
+#whatsapp-button {
+  padding: 10px;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  outline: none; /* Elimina el contorno predeterminado al hacer clic */
+}
+
+/* Estilo para la imagen del botón de WhatsApp */
+#whatsapp-button img {
+  width: 60px; /* Ajusta el tamaño de la imagen según sea necesario */
+  height: auto; /* Mantiene la proporción de la imagen */
+}
 .card {
   background-color: white;
   border-radius: 10px;

@@ -8,17 +8,18 @@ import Servicios from './servicios';
 import Counter from './counter';
 import Footer from './footer';
 import Nosotros from './nosotros';
+import OpenWhatsApp from './whatsapp';
 function Home() {
   return (
-    <><div>
+    <>
       <Navbar />
       <br />
       <Slider />
+      <OpenWhatsApp/>
       <br />
       <br />
       <Nosotros />
       <Aliados />
-    </div>
       <br></br>
       <Servicios />
       <br></br>
@@ -27,7 +28,6 @@ function Home() {
       <br></br>
       <Footer />
     </>
-
   );
 }
 export default Home;

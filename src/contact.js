@@ -33,7 +33,7 @@ function ContactForm() {
   
     return (
       <div id="contacto">
-        <h2>Contactanos</h2>
+       
       <div className="app-container">
         <form onSubmit={handleFormSubmit} className="contact-form">
           <label htmlFor="name" className="form-label">
