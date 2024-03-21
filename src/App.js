@@ -8,6 +8,10 @@ import Equipo from './trabajo equipo';
 import Cliente from './servicio cliente';
 import Productos from './productos';
 import Contacto from './contacto';
+import Redes from './redes';
+import Cableado from './Cableado';
+import Puntosred from './puntosred';
+import Datacenters from './datacenter';
 // Importa el componente de otra página si tienes uno
 // import OtraPagina from './OtraPagina';
 
@@ -23,6 +27,12 @@ function App() {
         <Route path="/cliente" element={<Cliente/>} />
         <Route path="/servicios" element={<Productos/>} />
         <Route path="/contacto" element={<Contacto/>} />
+        <Route path="/integracionredes" element={<Redes />} />
+        <Route path="/cableadoestructurado" element={<Cableado/>} />
+        <Route path="/puntosdered" element={<Puntosred/>} />
+        <Route path="/datacenters" element={<Datacenters />} />
+
+
         {/* Agrega más rutas aquí si es necesario */}
         {/* Por ejemplo: */}
         {/* <Route path="/otra-pagina" element={<OtraPagina />} /> */}
