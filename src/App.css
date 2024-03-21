@@ -743,4 +743,41 @@ hr{
     text-align: center; /* Centra el texto en dispositivos móviles */
   }
 }
+@media (max-width: 768px) {
+  .servicios2 {
+    flex-direction: column; /* Cambia la dirección de los elementos a columna en dispositivos móviles */
+  }
+
+  .mosaico {
+    margin-left: 0; /* Elimina el margen izquierdo en dispositivos móviles */
+  }
+
+  .fila {
+    flex-direction: column; /* Cambia la dirección de los elementos a columna en dispositivos móviles */
+    align-items: center; /* Centra los elementos horizontalmente en dispositivos móviles */
+  }
+
+  .imagen-container {
+    margin-bottom: 20px; /* Agrega espacio entre las imágenes en dispositivos móviles */
+  }
+
+  .fila-img {
+    max-width: 100%; /* Ajusta el ancho máximo de las imágenes al 100% del contenedor */
+    height: auto; /* Ajusta la altura automáticamente para mantener la proporción */
+  }
+
+  .overlay {
+    display: none; /* Oculta el overlay en dispositivos móviles */
+  }
+
+  .texto {
+    margin-left: 0; /* Elimina el margen izquierdo en dispositivos móviles */
+    padding: 20px; /* Añade espacio alrededor del texto en dispositivos móviles */
+    text-align: center; /* Centra el texto en dispositivos móviles */
+  }
+
+  h2 {
+    margin-left: 0; /* Elimina el margen izquierdo en dispositivos móviles */
+  }
+}
 
