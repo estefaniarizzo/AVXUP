@@ -16,7 +16,7 @@ function Cableado() {
             <div className="mosaico">
               <div className="fila">
                 <div className="imagen-container">
-                  <img src={cableado} alt="Compromis" className="fila-img" style={{ maxWidth: '580px', maxHeight: '580px', borderRadius:'35px' }} />
+                  <img src={cableado} alt="Compromis" className="fila-img" style={{ maxWidth: '680px', maxHeight: '580px', borderRadius:'35px' }} />
                 </div>
               </div>
             </div>

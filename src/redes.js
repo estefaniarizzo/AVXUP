@@ -3,9 +3,9 @@ import Navbar from './Navbar';
 import Footer from './footer';
 import integrared from './assets/integracion2.jpg';
 const Redes =() =>{
-    return <section>
-      
-        <Navbar />
+    return (
+<>
+<Navbar />
         <br />
         <br />
         <br />
@@ -16,7 +16,7 @@ const Redes =() =>{
             <div className="mosaico">
               <div className="fila">
                 <div className="imagen-container">
-                  <img src={integrared} alt="Intregracionredes" className="fila-img" style={{ maxWidth: '580px', maxHeight: '580px', borderRadius:'35px' }} />
+                  <img src={integrared} alt="Intregracionredes" className="fila-img" style={{ width: '580px', Height: '780px', borderRadius:'35px' }} />
                 </div>
               </div>
             </div>
@@ -33,8 +33,10 @@ const Redes =() =>{
         </div>
         <br/><br/>
         <Footer />
-      </section>
-    
+
+</>
+
+    );
   }
   
   export default Redes;
