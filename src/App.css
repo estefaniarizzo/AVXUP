@@ -646,3 +646,101 @@ hr{
   margin-left: 60px;
   margin-right: 60px;
 }
+
+/* Media queries para dispositivos móviles */
+@media (max-width: 768px) {
+  /* Haz que el logotipo sea más pequeño */
+  .logotipo {
+    height: 60px;
+  }
+
+  /* Ajusta el tamaño de la fuente para los encabezados */
+  .h5 {
+    font-size: 16px;
+  }
+
+  /* Ajusta el margen izquierdo del mosaico */
+  .mosaico {
+    margin-left: 0;
+  }
+
+  /* Ajusta el margen izquierdo del contenedor de texto */
+  .texto {
+    padding: 20px;
+  }
+
+  /* Ajusta el margen izquierdo del contenedor de video */
+  .video-container {
+    margin-left: 0;
+  }
+
+  /* Estilos para la barra de navegación */
+  navbar {
+    height: 60px;
+  }
+
+  /* Ajustes para la sección de contacto */
+  .contact-form {
+    max-width: 80%;
+    margin: auto;
+  }
+}
+
+/* Media queries para dispositivos aún más pequeños */
+@media (max-width: 480px) {
+  /* Haz que el logotipo sea aún más pequeño */
+  .logotipo {
+    height: 50px;
+  }
+
+  /* Ajusta el tamaño de la fuente para los encabezados en dispositivos más pequeños */
+  .h5 {
+    font-size: 14px;
+  }
+
+  /* Reduce el espacio alrededor del texto en dispositivos más pequeños */
+  .texto {
+    padding: 10px;
+  }
+
+  /* Ajusta el margen izquierdo del contenedor de video en dispositivos más pequeños */
+  .video-container {
+    margin-left: 0;
+  }
+
+  /* Ajustes para la barra de navegación en dispositivos más pequeños */
+  navbar {
+    height: 50px;
+   
+  }
+  ul li {
+    font-size: 10px;
+  }
+}
+@media (max-width: 768px) {
+  .servicios2 {
+    flex-direction: column; /* Cambia la dirección de los elementos a columna en dispositivos móviles */
+  }
+
+  .mosaico {
+    margin-left: 0; /* Elimina el margen izquierdo en dispositivos móviles */
+  }
+
+  .imagen-container img {
+    width: 100%; /* Asegura que la imagen se ajuste al ancho del contenedor */
+    height: auto; /* Ajusta la altura automáticamente para mantener la proporción */
+    border-radius: 0; /* Elimina el radio de borde en dispositivos móviles */
+    margin-bottom: 20px; /* Agrega espacio entre la imagen y el texto en dispositivos móviles */
+  }
+
+  .texto {
+    margin-left: 0; /* Elimina el margen izquierdo en dispositivos móviles */
+    padding: 20px; /* Añade espacio alrededor del texto en dispositivos móviles */
+  }
+
+  h2 {
+    margin-left: 0; /* Elimina el margen izquierdo en dispositivos móviles */
+    text-align: center; /* Centra el texto en dispositivos móviles */
+  }
+}
+
